@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace WebApi2.Controllers
 {
@@ -9,7 +10,7 @@ namespace WebApi2.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            return "response from webapi2";
+            return JsonConvert.SerializeObject("response from webapi2");
         }
     }
 }
