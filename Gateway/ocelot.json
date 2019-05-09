@@ -1,3 +1,31 @@
 {
-
+  "ReRoutes": [
+    {
+      "ReRouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/api/service1/{everything}"
+    },
+    {
+      "ReRouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "UpstreamPathTemplate": "/api/service2/{everything}"
+    }
+  ],
+  "GlobalConfiguration": {
+    // "BaseUrl": "https://api.mybusiness.com"
+  }
 }

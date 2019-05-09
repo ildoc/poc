@@ -2,7 +2,7 @@
 
 namespace WebApi2.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class Test2Controller : ControllerBase
     {
